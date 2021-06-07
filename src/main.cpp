@@ -38,7 +38,7 @@ int main(int argc, char** args) {
 
         fs::current_path(path);
 
-        cout << "Result: " << endl;
+        cout << endl << "Result: " << endl;
         for(auto& p: fs::recursive_directory_iterator(".")) {
             string currentPath = p.path();
             replaceAll(currentPath, "/", " ");
