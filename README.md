@@ -1,10 +1,26 @@
 # asn1ify
 Transform classic path to ASN.1-like path
 
-
-- [Examples](#examples)
 - [Installation](#installation)
+- [Examples](#examples)
 - [Documentation](#documentation)
+
+## Installation 
+
+#### Arch Linux:
+asn1ify is in AUR, you can install it with `yay` or other tools:
+```sh
+yay -S asn1ify
+```
+
+#### Other distribs (Manual Install):
+```sh
+git clone https://github.com/RyFax/asn1ify
+cd asn1ify
+sudo make install
+```
+
+<br>
 
 ## Examples
 
@@ -36,22 +52,7 @@ example/
 ```
 *File are renamed first, and folder after, so it's in this order every time you execute this command.*
 
-
-## Installation 
-
-#### Arch Linux:
-asn1ify is in AUR, you can install it with `yay` or other tools:
-```sh
-yay -S asn1ify
-```
-
-#### Other distribs (Manual Install):
-```sh
-git clone https://github.com/RyFax/asn1ify
-cd asn1ify
-sudo make install
-```
-
+<br>
 
 ## Documentation
 
