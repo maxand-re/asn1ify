@@ -3,4 +3,4 @@ project(asn1ify)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(asn1ify main.cpp)
+add_executable(asn1ify src/main.cpp)
