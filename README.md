@@ -34,6 +34,7 @@ example/
 │       └── 00 # foo
 └── 02 # bar
 ```
+*File are renamed first, and folder after, so it's in this order every time you execute this command.*
 
 
 ## Installation 
