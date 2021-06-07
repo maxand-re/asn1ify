@@ -2,8 +2,38 @@
 Transform classic path to ASN.1-like path
 
 
+- [Examples](#examples)
 - [Installation](#installation)
 - [Documentation](#documentation)
+
+## Examples
+
+#### Before:
+```
+example/
+├── bar
+├── file.txt
+└── foo
+    ├── bar
+    │   └── foo
+    └── file.txt
+```
+
+#### Execute:
+```sh
+asn1ify example/
+```
+
+#### After:
+```sh
+example/
+├── 00 # file.txt
+├── 01 # foo
+│   ├── 00 # file.txt
+│   └── 01 # bar
+│       └── 00 # foo
+└── 02 # bar
+```
 
 
 ## Installation 
