@@ -96,10 +96,10 @@ string intToHex(const int &value){
     const string hex = "0123456789ABCDEF";
     string res;
 
-    int num = value;
-    if(num == 0) return "00";
-    if(num <= 15) res += "0";
+    if(value == 0) return "00";
+    if(value <= 15) res += "0";
 
+    int num = value;
     while(num > 0) {
         res += hex[num % 16];
         num /= 16;
