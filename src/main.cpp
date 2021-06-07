@@ -40,7 +40,11 @@ int main(int argc, char** args) {
 
         cout << "Result: " << endl;
         for(auto& p: fs::recursive_directory_iterator(".")) {
-            cout << "\t" << p.path() << endl;
+            string currentPath = p.path();
+            replaceAll(currentPath, "/", " ");
+            replaceAll(currentPath, ".", "");
+
+            cout << "\t" << currentPath << endl;
         }
     } else {
         cout << "ERROR: Directory \"" << path << "\" not found" << endl;
@@ -93,7 +97,8 @@ string intToHex(const int &value){
     string res;
 
     int num = value;
-    if(num == 0) return "0";
+    if(num == 0) return "00";
+    if(num <= 15) res += "0";
 
     while(num > 0) {
         res += hex[num % 16];
