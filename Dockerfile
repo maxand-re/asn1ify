@@ -3,13 +3,15 @@ WORKDIR /usr/local/src
 
 COPY * ./
 
-CMD make install
+RUN make install
 
-FROM alpine
+FROM archlinux
 WORKDIR /srv
 
 COPY --from=builder /usr/local/src/asn1ify /srv/
 
-VOLUME /mnt
+RUN chmod +x ./asn1ify
 
-RUN asn1ify /mnt
+VOLUME /mnt/
+
+CMD ["/srv/asn1ify", "/mnt"]
