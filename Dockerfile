@@ -1,6 +1,14 @@
-FROM arch
+FROM gcc as builder
+WORKDIR /usr/local/src
 
-CMD yay -S asn1ify
+COPY * ./
+
+CMD make install
+
+FROM alpine
+WORKDIR /srv
+
+COPY --from=builder /usr/local/src/asn1ify /srv/
 
 VOLUME /mnt
 
