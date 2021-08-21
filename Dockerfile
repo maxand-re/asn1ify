@@ -1,6 +1,6 @@
 FROM arch
 
-RUN yay -S asn1ify
+CMD yay -S asn1ify
 
 VOLUME /mnt
 
